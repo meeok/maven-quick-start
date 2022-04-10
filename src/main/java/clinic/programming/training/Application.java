@@ -3,7 +3,7 @@ package clinic.programming.training;
 
 import java.util.ArrayList;
 import java.util.List;
-//import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 
 public class Application {
@@ -13,7 +13,7 @@ public class Application {
     }
     
     public int countWords(String words) {
-    	String[] seperateWords = words.split(" ");//StringUtils.split(words," ");////
+    	String[] seperateWords = StringUtils.split(words," ");//words.split(" ");//;////
     	return (seperateWords == null) ? 0 : seperateWords.length;
     }
     public void great() {
@@ -29,6 +29,6 @@ public class Application {
     	System.out.println ("Starting Application");
     	Application app = new Application();
     	app.great();
-    	System.out.println("count words: "+app.countWords("I have four words"));
+    	System.out.println("count words: "+app.countWords(null));
     }
 }
